@@ -14,7 +14,7 @@ final class ___VARIABLE_sceneName___Model: ObservableObject, ModelType {
     private var cancellables = Set<AnyCancellable>()
 
     init(parent: AppState) {
-        state.$isLoading
+        parent.$isLoading
             .assign(to: \Self.isLoading, on: self)
             .store(in: &cancellables)
     }
